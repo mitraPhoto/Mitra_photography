@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"">
+    <title>Mitra photography</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="icon" type="image/x-icon" href="https://www.freeiconspng.com/thumbs/camera-icon/camera-icon-png-camera-icon-png-transparent-16.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <section id="main">
+<div id="header">
+    <div class="itemh" style="color:rgb(56, 30, 30);letter-spacing:3px;font-weight:bold;font-size:30px;text-align:center;">MITRA PHOTOGRAPHY</div>
+    <div class="itemh" id="list">
+        <div class="listh"><a href="index.html">Home</a></div>
+        <div class="listh"><a href="index.html#about">About</a></div>
+        <div class="listh"><a href="index.html#gallery">Portfolio</a></div>
+        <div class="listh"><a href="index.html#blog">Blog</a></div>
+        <div class="listh"><a href="index.html#contact">Contact</a></div>
+    </div>
+   </div>
+   </section>
+<section id="gallery">
+    <div id="conatiner_images">
+        <div class="divi_1"><img src="https://ik.imagekit.io/mitraphoto/gt4_B8DSZ2nHBX.jpg" class="images_1"></div>
+        <div class="divi_1"><img src="https://ik.imagekit.io/mitraphoto/IMG_20210717_172705_L7szZmQRo.jpg" class="images_1"></div>
+        <div class="divi_1"><img src="https://ik.imagekit.io/mitraphoto/IMG_20210717_121123_HAsazT9NC.jpg" class="images_1"></div>
+        <div class="divi_1"><img src="https://ik.imagekit.io/mitraphoto/IMG_20210717_171041_EPYiokso0.jpg" class="images_1"></div>
+        <div class="divi_1"><img src="https://ik.imagekit.io/mitraphoto/IMG_20210717_170625_ssP_i8mXm.jpg" class="images_1"></div>
+        <div class="divi_1"><img src="https://ik.imagekit.io/mitraphoto/IMG_20210717_134335_XuTdtJeyx.jpg" class="images_1"></div>
+        <div class="divi_1"><img src="https://ik.imagekit.io/mitraphoto/gt6_5Iv-8Ayez.JPG" class="images_1"></div>
+        <div class="divi_1"><img src="https://ik.imagekit.io/mitraphoto/IMG_20210717_135408_hUVpFR6jhe.jpg" class="images_1"></div>
+                </div>
+                <div class="popup" class="divi_1">
+                    <span id="button">&times;</span>
+                    <div class="divi_1"><img  class="images_1"></div>
+                </div>
+
+</div>
+</section>
+<section id="gallery2">
+    <div id="conatiner_images">
+        <div class="divi_1"><img src="https://ik.imagekit.io/mitraphoto/g5_4NHh5_F4M-.jpg" class="images_1"></div>
+        <div class="divi_1"><img src="https://ik.imagekit.io/mitraphoto/IMG_20210717_171313_dC3XFS7Us.jpg" class="images_1"></div>
+        <div class="divi_1"><img src="https://ik.imagekit.io/mitraphoto/IMG_20210717_170952_TjUHnBEfC.jpg" class="images_1"></div>
+        <div class="divi_1"><img src="https://ik.imagekit.io/mitraphoto/IMG_20210717_171115__mgwkp7Yj.jpg" class="images_1"></div>
+        <div class="divi_1"><img src="https://ik.imagekit.io/mitraphoto/gt3_ilzsWadvR.jpg" class="images_1"></div>
+        <div class="divi_1"><img src="https://ik.imagekit.io/mitraphoto/IMG_20210717_134812_gjTucIFAH.jpg" class="images_1"></div>
+        <div class="divi_1"><img src="https://ik.imagekit.io/mitraphoto/IMG_20210717_170747_R_zoAY0TY.jpg" class="images_1"></div>
+        <div class="divi_1"><img src="https://ik.imagekit.io/mitraphoto/IMG_20210717_115105_yf26it_mT.jpg" class="images_1"></div>
+                </div>
+                <div class="popup" class="divi_1">
+                    <span id="button">&times;</span>
+                    <img  src="https://ik.imagekit.io/mitraphoto/gt2_f0FQo-UMj.jpg">
+                </div>
+</div>
+</section>
+<section id="footer">
+    &#169; MitraCP
+</section>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script>
+  
+    $(document).ready(function()
+{   $(document).bind("contextmenu",function(e){
+      return false;
+   });
+    $(".popup").hide();
+    $("#Fade").fadeToggle(3000)
+    $(".images_1").on("click",function()
+    {
+            var img_src=$(this).attr("src")
+            console.log(img_src)
+            $(".popup").show().children("img").attr("src",img_src);
+
+    })
+    $(".popup").children("span").on("click",function()
+    {
+        $(".popup").show().children("img").attr("src","");
+        $(".popup").hide();
+
+    })
+    $(".popup").on("click",function()
+    {
+        $(".popup").show().children("img").attr("src","");
+        $(".popup").hide();
+
+    })
+});
+  
+
+</script>
+
+   </body>
+   </html>
